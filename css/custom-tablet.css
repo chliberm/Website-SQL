@@ -1,0 +1,26 @@
+.grid-layout main {
+    grid-template-areas: 
+        "article1"
+        "article2"
+        "info";
+}
+
+.positioning nav a {
+    padding: 0.2em;
+}
+
+figure {
+    float: none;
+    display: block;
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+}
+
+figure#right {
+    float: none;
+    display: block;
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+}

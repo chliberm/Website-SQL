@@ -1,0 +1,280 @@
+:root {
+    --main-color: black;
+    --main-h1-bg-color: rgba(29, 28, 70, 0.7);
+    --main-h2-bg-color: rgba(64, 83, 31, 0.7);
+    --main-h3-bg-color: rgba(61, 81, 167, 0.7);
+    --main-p-bg-color: rgb(160, 194, 101, 0.7);
+    --main-table-bg-color:rgba(107, 216, 243, 0.7);
+    --main-line-bg-color1:rgba(132, 248, 219, 0.7);
+    --main-line-bg-color2:rgba(6, 150, 233, 0.7);
+    --main-border-color: rgb(63, 16, 55);
+}
+
+figure {
+    text-align: center; 
+    width: 90%;
+    border-radius: 1em;
+    border: thin solid var(--main-border-color);
+    padding: 1%;
+}
+
+figure#right {
+    float: right; 
+}
+
+figcaption {
+    font-style: italic;
+    color: var(--main-h3-bg-color);
+    font-family: serif;
+    text-align: center;
+}
+
+img {
+    max-width: 100%;
+    border-radius: 1em;
+    transition: opacity 500ms;
+}
+
+img:hover {
+    opacity: 0;
+}
+
+cite {
+    font-size: xx-small;
+}
+
+nav a:link {
+    background-color: #fff;
+    color: #009;
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav a.activePage {
+    text-shadow: 0 0 1em rgb(169, 109, 209);
+    border-top: thick solid var(--main-border-color);
+}
+
+nav {
+    border: thin solid yellow;
+    background-color: white;
+    text-align: center;
+    
+}
+
+body {
+    border:thin solid var(--main-border-color);
+    background-image: url("../images/background-light.png");
+    font-family: fantasy;
+}
+
+body#detail {
+    animation-name: changeBackground;
+    animation-duration: 5s;
+}
+
+@keyframes changeBackground {
+    from {background-image: url("../images/background-light.jpg");}
+    to {background-image: url("../images/background-light.png");}
+}
+
+h1 {
+    background-color: var(--main-h1-bg-color);
+    text-transform: uppercase;
+}
+
+h2 {
+    background-color: var(--main-h2-bg-color);
+}
+
+h3 {
+    background-color: var(--main-h3-bg-color);
+}
+
+p {
+    background-color: var(--main-p-bg-color);
+    text-indent: 5%;
+}
+
+table {
+    background-color:var(--main-table-bg-color);
+    border: thick solid var(--main-border-color);
+    border-collapse: collapse;
+    width: 80%;
+    max-width: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+tr, th, td {
+    border: thin solid var(--main-border-color);
+}
+
+th {
+    color:rgba(29, 28, 70);
+    font-style: italic;
+}
+
+tr {
+    font-family: sans-serif;
+}
+
+tbody tr:nth-child(2n) {
+    background-color: var(--main-line-bg-color2);
+}
+
+tbody tr:nth-child(2n + 1) {
+    background-color: var(--main-line-bg-color1);
+}
+
+tbody tr:hover {
+    background-color:rgb(169, 109, 209, 0.3);
+}
+
+table caption {
+    text-transform: capitalize;
+    text-align: left;
+    font-style: italic;
+}
+
+main a:hover, footer a:hover {
+    color: rgb(140, 161, 224);
+}
+
+li:nth-child(2n) {
+    background-color: var(--main-line-bg-color1);
+}
+
+li:nth-child(2n + 1) {
+    background-color: var(--main-line-bg-color2);
+}
+
+article, section, aside, nav {
+    padding: 1%;
+}
+
+.grid-layout nav {
+    display: grid;
+    justify-content: space-evenly;
+    grid-template-columns: auto auto auto auto;
+}
+
+.grid-layout main {
+    display: grid;
+    justify-content: space-evenly;
+    max-width: fit-content;
+    max-height: fit-content;
+    grid-template-areas: 
+        "h2 h2 h2"
+        "article1 article1 figure"
+        "article2 article2 info";
+}
+
+.grid-layout h2 {
+    grid-area: h2;
+}
+
+.grid-layout figure {
+    grid-area: figure;
+}
+
+.grid-layout .article1 {
+    grid-area: article1;
+}
+
+.grid-layout .article2 {
+    grid-area: article2;
+}
+
+.grid-layout .info {
+    grid-area: info;
+}
+
+.positioning {
+    display: grid;
+    grid-template-areas: "nav" "header" "main" "footer";
+}
+
+form {
+    background: linear-gradient(rgb(18, 18, 54), rgb(61, 81, 167));
+    color:rgb(140, 161, 224);
+    padding: 1%;
+    display: inline-block;
+    width: 100%;
+    text-align: left;
+}
+
+main .formPos {
+    display: inline-block;
+}
+
+.contact label {
+    font-size: xx-small;
+}
+fieldset {
+    border: none;
+}
+
+form p {
+    background-color: rgba(18, 18, 54, 0.000001);
+}
+
+input[type=text] {
+    background-color: rgb(203, 206, 236);
+    border: thin solid rgb(61, 81, 167);
+    border-radius: 1em;
+    width: 100%;
+    padding: 1em 3em;
+    margin: 1em 0;
+    box-sizing: border-box;
+}  
+
+input[type=email] {
+    background-color: rgb(203, 206, 236);
+    border: thin solid rgb(61, 81, 167);
+    border-radius: 1em;
+    width: 100%;
+    padding: 1em 3em;
+    margin: 1em 0;
+    box-sizing: border-box;
+}  
+
+select {
+    width: 70%;
+    padding: 1em 1em;
+    border: none;
+    border-radius: 1em;
+    background-color: rgb(163, 170, 231);
+}
+
+input[type=checkbox] ~ label, input[type=radio] ~ label {
+    font-family: serif;
+}
+
+textarea {
+    width: 70%;
+    background-color: rgb(203, 206, 236);
+    border: thin solid rgb(61, 81, 167);
+    border-radius: 1em;
+    color:rgb(63, 16, 55);
+    padding: 2em 3em;
+    margin: 1em 0.5em;
+}
+
+input[type=submit] {
+    background-color: rgb(163, 170, 231);
+    border: thin solid rgb(61, 81, 167);
+    border-radius: 1em;
+    color:rgb(63, 16, 55);
+    padding: 1em 2em;
+    margin: 1em 0.5em;
+    cursor: pointer;
+    box-shadow: 1em 1em 0.5em gray;
+}
+
+input[type=submit]:hover {
+    background-color: royalblue;
+}
